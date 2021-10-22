@@ -3,4 +3,10 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
 
+
+  
+  get "/groups" => "groups#show"
+
+  post "/comments" => "comments#create"
+  delete "/comments/:id" => "comments#destroy"
 end

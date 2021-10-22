@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzUwMTQ5ODB9.q3K9eMXkv4HuFtSqJLUwdnt4_wweIYy4vzYyRuYtvKw
+
 ### Users create (signup)
   # POST http://localhost:3000/users
   # Content-Type: application/json
@@ -9,7 +11,7 @@
   #   "password_confirmation": "password"
   # }
 
-  ### Sessions create (login)
+  ## Sessions create (login)
   
   # POST http://localhost:3000/sessions
   # Content-Type: application/json
@@ -18,3 +20,18 @@
   #   "email": "james@gmail.com",
   #   "password": "password"
   # }
+
+  ### Comment create 
+  # POST http://localhost:3000/comments 
+  # Content-Type: application/json 
+  # Authorization: Bearer {{jwt}}
+
+  # {
+  #   "text": "asdfasdf blah blah",
+  #   "listing_id": 2
+  # }
+
+### Comment delete
+  # DELETE http://localhost:3000/comments/10
+  # Content-Type: application/json 
+  # Authorization: Bearer {{jwt}}
