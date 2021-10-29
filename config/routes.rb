@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   # USER 
   get "/users" => "users#show"
-  get "/users" => "users#update"
-  get "/users" => "users#destroy"
+  patch "/users" => "users#update"
+  delete "/users" => "users#destroy"
 
   # GROUPS
   get "/groups" => "groups#show"
