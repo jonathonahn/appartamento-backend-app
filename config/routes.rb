@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
 
   # USER 
-  get "/users/:id" => "users#show"
+  get "/users/" => "users#show"
   get "/users" => "users#update"
   get "/users" => "users#destroy"
 
