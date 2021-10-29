@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzU1ODcxOTV9.JLichCfUmIwB4gxEhjaaoS8XYf18mVDugvzPIEn_7O8
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzU2MTI5Mjl9.YFGKr7QuPtMTBPvsXr8WnMs0AKoCHrl85X0OqLcLGFY
 
 ### Users create (signup)
   # POST http://localhost:3000/users
@@ -40,3 +40,8 @@
   # GET http://localhost:3000/users/
   # Content-Type: application/json 
   # Authorization: Bearer {{jwt}}
+
+  GET http://localhost:3000/groups/
+  Content-Type: application/json 
+  Authorization: Bearer {{jwt}}
+

@@ -31,6 +31,6 @@ class GroupsController < ApplicationController
   def destroy
     group = Group.find(current_user.group)
     group.destroy 
-    render json: {"Group destroyed!"}
+    render json: {message: "Group destroyed!"}
   end
 end
