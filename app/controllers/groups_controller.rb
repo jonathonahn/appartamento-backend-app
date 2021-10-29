@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
   end
 
   def update
-    group = Group.find(params[:id])
+    group = Group.find(current_user.group)
     group.name = params[:name] || group.name
     group.image = params[:image] || group.image
     if group.save 
@@ -29,7 +29,7 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    group = Group.find(params[:id])
+    group = Group.find(current_user.group)
     group.destroy 
     render json: {"Group destroyed!"}
   end

@@ -17,9 +17,9 @@ class CommentsController < ApplicationController
     comment = Comment.find_by(id: params[:id])
     if comment.user_id == current_user.id 
       comment.destroy
-      render json: { message: "comment successfully destroyed!" }
+      render json: { message: "comment successfully destroyed!" }, status: :accepted
     else
-      render json: { message: "not your comment how did you get here!" }
+      render json: { message: "not your comment how did you get here!" }, status: :unauthorized
     end
   end
 end

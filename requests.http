@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzUzMTI4MDJ9.TP2vV1pNk_B4ymLdZyPWPExYKeSp7y_5_lz3rE3Uk7U
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzU1ODcxOTV9.JLichCfUmIwB4gxEhjaaoS8XYf18mVDugvzPIEn_7O8
 
 ### Users create (signup)
   # POST http://localhost:3000/users
@@ -33,5 +33,10 @@
 
 ### Comment delete
   # DELETE http://localhost:3000/comments/10
+  # Content-Type: application/json 
+  # Authorization: Bearer {{jwt}}
+
+### USER SHOW
+  # GET http://localhost:3000/users/
   # Content-Type: application/json 
   # Authorization: Bearer {{jwt}}

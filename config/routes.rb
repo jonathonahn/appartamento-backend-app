@@ -5,20 +5,20 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
 
   # USER 
-  get "/users/" => "users#show"
+  get "/users" => "users#show"
   get "/users" => "users#update"
   get "/users" => "users#destroy"
 
   # GROUPS
-  get "/groups/:id" => "groups#show"
+  get "/groups" => "groups#show"
   post "/groups" => "groups#create"
   patch "/groups" => "groups#update"
   delete "/groups" => "groups#destroy"
 
   # LISTINGS
   post "/listings" => "listings#create"
-  patch "/listings" => "listings#update"
-  delete "/listings" => "listings#destroy"
+  patch "/listings/:id" => "listings#update"
+  delete "/listings/:id" => "listings#destroy"
 
   # COMMENTS
   post "/comments" => "comments#create"
