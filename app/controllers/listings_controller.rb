@@ -3,7 +3,7 @@ class ListingsController < ApplicationController
   def create
     listing = Listing.new(
       address: params[:address],
-      group_id: params[:group_id],
+      group_id: current_user.group_id,
       status: params[:status],
       url: params[:url]
     )
@@ -17,7 +17,6 @@ class ListingsController < ApplicationController
   def update
     listing = Listing.find(params[:id])
     listing.address = params[:address] || listing.address
-    listing.group_id = params[:group_id] || listing.group_id
     listing.status = params[:status] || listing.status
     listing.url = params[:url] || listing.url
     if listing.save 

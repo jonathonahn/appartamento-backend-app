@@ -1,16 +1,18 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user
   def show
-    group = current_user.group 
-    render json: group
+    group = current_user.group
+    render json: group, include: "listings.comments.user"
   end
 
   def create 
     group = Group.new(
       name: params[:name],
-      image: params[:image]
+      image: params[:image],
     )
     if group.save 
+      current_user.group_id = group.id
+      current_user.save
       render json: group 
     else 
     render json: { errors: group.errors.full_messages}, status: :bad_request
@@ -18,7 +20,7 @@ class GroupsController < ApplicationController
   end
 
   def update
-    group = Group.find(current_user.group)
+    group = current_user.group
     group.name = params[:name] || group.name
     group.image = params[:image] || group.image
     if group.save 
@@ -29,7 +31,7 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    group = Group.find(current_user.group)
+    group = current_user.group
     group.destroy 
     render json: {message: "Group destroyed!"}
   end

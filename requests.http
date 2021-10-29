@@ -1,47 +1,84 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzU2MTI5Mjl9.YFGKr7QuPtMTBPvsXr8WnMs0AKoCHrl85X0OqLcLGFY
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU2MTg5MDh9.FdyZaykaNDK9Gd0yDWp2eBRU_LuXtI3CH724SEQvfHE
 
 ### Users create (signup)
-  # POST http://localhost:3000/users
-  # Content-Type: application/json
+POST http://localhost:3000/users/
+Content-Type: application/json
 
-  # {
-  #   "name": "nathan",
-  #   "email": "nathan@gmail.com",
-  #   "password": "password",
-  #   "password_confirmation": "password"
-  # }
+{
+  "name": "dani",
+  "email": "dani@gmail.com",
+  "password": "password",
+  "password_confirmation": "password",
+  "group_id": 1
+}
 
-  ## Sessions create (login)
-  
-  # POST http://localhost:3000/sessions
-  # Content-Type: application/json
+### Sessions create (login)
 
-  # {
-  #   "email": "james@gmail.com",
-  #   "password": "password"
-  # }
+POST http://localhost:3000/sessions
+Content-Type: application/json
 
-  ### Comment create 
-  # POST http://localhost:3000/comments 
-  # Content-Type: application/json 
-  # Authorization: Bearer {{jwt}}
+{
+  "email": "raymond@gmail.com",
+  "password": "password"
+}
 
-  # {
-  #   "text": "asdfasdf blah blah",
-  #   "listing_id": 2
-  # }
+### Comment create 
+POST http://localhost:3000/comments
+Content-Type: application/json 
+Authorization: Bearer {{jwt}}
+
+{
+  "text": "asdfasdf blah blah",
+  "listing_id": 5
+}
+
+### listing create 
+POST http://localhost:3000/listings 
+Content-Type: application/json 
+Authorization: Bearer {{jwt}}
+
+{
+  "address": "1234 test street",
+  "status": "does not exist",
+  "url": "test.com"
+}
 
 ### Comment delete
-  # DELETE http://localhost:3000/comments/10
-  # Content-Type: application/json 
-  # Authorization: Bearer {{jwt}}
+DELETE http://localhost:3000/comments/11
+Content-Type: application/json 
+Authorization: Bearer {{jwt}}
 
 ### USER SHOW
-  # GET http://localhost:3000/users/
-  # Content-Type: application/json 
-  # Authorization: Bearer {{jwt}}
+GET http://localhost:3000/users/current
+Content-Type: application/json 
+Authorization: Bearer {{jwt}}
 
-  GET http://localhost:3000/groups/
-  Content-Type: application/json 
-  Authorization: Bearer {{jwt}}
+### group show
 
+GET http://localhost:3000/groups/current
+Content-Type: application/json 
+Authorization: Bearer {{jwt}}
+
+### user update 
+
+PATCH http://localhost:3000/users/current
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "name": "danielle",
+  "email": "danielle@gmail.com",
+  "image": "image.url"
+}
+
+### user destroy 
+
+DELETE http://localhost:3000/users/current
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### group destroy
+
+DELETE http://localhost:3000/groups/current
+Content-Type: application/json
+Authorization: Bearer {{jwt}}

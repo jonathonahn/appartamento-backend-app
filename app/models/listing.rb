@@ -1,5 +1,5 @@
 class Listing < ApplicationRecord
   validates :address, presence: true
   belongs_to :group 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 end

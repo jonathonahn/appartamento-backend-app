@@ -5,15 +5,15 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
 
   # USER 
-  get "/users" => "users#show"
-  patch "/users" => "users#update"
-  delete "/users" => "users#destroy"
+  get "/users/current" => "users#show"
+  patch "/users/current" => "users#update"
+  delete "/users/current" => "users#destroy"
 
   # GROUPS
-  get "/groups" => "groups#show"
-  post "/groups" => "groups#create"
-  patch "/groups" => "groups#update"
-  delete "/groups" => "groups#destroy"
+  get "/groups/current" => "groups#show"
+  post "/groups/current" => "groups#create"
+  patch "/groups/current" => "groups#update"
+  delete "/groups/current" => "groups#destroy"
 
   # LISTINGS
   post "/listings" => "listings#create"
