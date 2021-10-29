@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU2MTg5MDh9.FdyZaykaNDK9Gd0yDWp2eBRU_LuXtI3CH724SEQvfHE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2MzU2MjExMTR9.VpwQ7qk8AwlZo8baT3NIYepTjA0oJHBMntZHiglbVhg
 
 ### Users create (signup)
 POST http://localhost:3000/users/
@@ -18,7 +18,7 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "raymond@gmail.com",
+  "email": "dani@gmail.com",
   "password": "password"
 }
 
