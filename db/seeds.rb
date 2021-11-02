@@ -64,25 +64,29 @@ Listing.create!([
     address: "8961 cadillac ave",
     group_id: 1,
     status: "pending contact",
-    url: "https://www.apartments.com/8961-cadillac-ave-los-angeles-ca/5r85qzq/"
+    url: "https://www.apartments.com/8961-cadillac-ave-los-angeles-ca/5r85qzq/",
+    image: "https://images1.apartments.com/i2/r-2i-_80D6viKkNuzcxAu_cytXWt7HrLNOLTx-cSeTE/116/8961-cadillac-ave-los-angeles-ca-primary-photo.jpg?p=1",
   },
   {
     address: "4650 mascot  st",
     group_id: 1,
     status: "denied",
-    url: "https://www.zillow.com/homedetails/4650-Mascot-St-Los-Angeles-CA-90019/2115431785_zpid/"
+    url: "https://www.zillow.com/homedetails/4650-Mascot-St-Los-Angeles-CA-90019/2115431785_zpid/",
+    image: "https://photos.zillowstatic.com/fp/6bbea42bb41b7d27de40057ca969dcf2-uncropped_scaled_within_1536_1152.webp",
   },
   {
     address: "4603 pickford st",
     group_id: 1,
     status: "confirmed",
-    url: "https://www.zillow.com/homedetails/4601-Pickford-St-Los-Angeles-CA-90019/20602010_zpid/"
+    url: "https://www.zillow.com/homedetails/4601-Pickford-St-Los-Angeles-CA-90019/20602010_zpid/",
+    image: "https://photos.zillowstatic.com/fp/d6aaa12b78cb6cd02460e9976b5080ca-uncropped_scaled_within_1536_1152.webp",
   },
   {
     address: "1233 s westgate ave",
     group_id: 1,
     status: "pending walkthrough",
-    url: "https://www.apartments.com/1233-s-westgate-ave-los-angeles-ca/y14z29r/"
+    url: "https://www.apartments.com/1233-s-westgate-ave-los-angeles-ca/y14z29r/",
+    image: "https://images1.apartments.com/i2/Q9tz0Bb7coDqI38JXn-tciJXDWqCG5rPoYbjwCYiTNs/116/1233-s-westgate-ave-los-angeles-ca-building-photo.jpg?p=1",
   },
   {
     address: "1234 test street",

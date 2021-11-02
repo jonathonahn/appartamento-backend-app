@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user, except: [:create]
   def show
     group = current_user.group
     render json: group, include: ["listings.comments.user", :users]
@@ -11,8 +11,6 @@ class GroupsController < ApplicationController
       image: params[:image],
     )
     if group.save 
-      current_user.group_id = group.id
-      current_user.save
       render json: group 
     else 
     render json: { errors: group.errors.full_messages}, status: :bad_request
