@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :authenticate_user
   def show
     group = current_user.group
-    render json: group, include: "listings.comments.user"
+    render json: group, include: ["listings.comments.user", :users]
   end
 
   def create 
