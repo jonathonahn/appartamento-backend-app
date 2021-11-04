@@ -7,10 +7,16 @@ class UsersController < ApplicationController
       password: params[:password],
       password_confirmation: params[:password_confirmation],
     )
-    if params[:group_id]
-      user.group_id = params[:group_id]
-    end
+    
     if user.save
+      if params[:group_id]
+        user.update(group_id: params[:group_id])
+      else
+        group = Group.create(
+          name: params[:group_name]
+        )
+        user.update(group_id: group.id)
+      end
       render json: user, status: :created
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
@@ -40,7 +46,11 @@ class UsersController < ApplicationController
 
   def destroy
     user = current_user 
-    user.destroy 
+    if user.group.users.length == 1
+      user.group.destroy
+    else
+      user.destroy 
+    end
     render json: {message: "user kaboom"}
   end
 end

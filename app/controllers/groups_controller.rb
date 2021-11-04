@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
     render json: group, include: ["listings.comments.user", :users]
   end
 
-  def create 
+  def create  # delete later maybe
     group = Group.new(
       name: params[:name],
       image: params[:image],
