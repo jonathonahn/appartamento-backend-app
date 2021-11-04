@@ -6,8 +6,8 @@ class ListingsController < ApplicationController
       group_id: current_user.group_id,
       status: params[:status],
       url: params[:url],
-      bed: params[:bed],
-      bath: params[:bath],
+      beds: params[:beds],
+      baths: params[:baths],
       squarefeet: params[:squarefeet]
     )
     if listing.save 
@@ -22,8 +22,8 @@ class ListingsController < ApplicationController
     listing.address = params[:address] || listing.address
     listing.status = params[:status] || listing.status
     listing.url = params[:url] || listing.url
-    listing.bed = params[:bed] || listing.bed
-    listing.bath = params[:bath] || listing.bath
+    listing.beds = params[:beds] || listing.beds
+    listing.baths = params[:baths] || listing.baths
     listing.squarefeet = params[:squarefeet] || listing.squarefeet
     if listing.save 
       render json: listing 
