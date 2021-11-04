@@ -66,6 +66,9 @@ Listing.create!([
     status: "pending contact",
     url: "https://www.apartments.com/8961-cadillac-ave-los-angeles-ca/5r85qzq/",
     image: "https://images1.apartments.com/i2/r-2i-_80D6viKkNuzcxAu_cytXWt7HrLNOLTx-cSeTE/116/8961-cadillac-ave-los-angeles-ca-primary-photo.jpg?p=1",
+    bed: 4,
+    bath: 3,
+    squarefeet: 1432,
   },
   {
     address: "4650 mascot  st",
@@ -73,6 +76,9 @@ Listing.create!([
     status: "denied",
     url: "https://www.zillow.com/homedetails/4650-Mascot-St-Los-Angeles-CA-90019/2115431785_zpid/",
     image: "https://photos.zillowstatic.com/fp/6bbea42bb41b7d27de40057ca969dcf2-uncropped_scaled_within_1536_1152.webp",
+    bed: 5,
+    bath: 4,
+    squarefeet: 1500,
   },
   {
     address: "4603 pickford st",
@@ -80,6 +86,9 @@ Listing.create!([
     status: "confirmed",
     url: "https://www.zillow.com/homedetails/4601-Pickford-St-Los-Angeles-CA-90019/20602010_zpid/",
     image: "https://photos.zillowstatic.com/fp/d6aaa12b78cb6cd02460e9976b5080ca-uncropped_scaled_within_1536_1152.webp",
+    bed: 4,
+    bath: 4,
+    squarefeet: 1645,
   },
   {
     address: "1233 s westgate ave",
@@ -87,12 +96,18 @@ Listing.create!([
     status: "pending walkthrough",
     url: "https://www.apartments.com/1233-s-westgate-ave-los-angeles-ca/y14z29r/",
     image: "https://images1.apartments.com/i2/Q9tz0Bb7coDqI38JXn-tciJXDWqCG5rPoYbjwCYiTNs/116/1233-s-westgate-ave-los-angeles-ca-building-photo.jpg?p=1",
+    bed: 3,
+    bath: 3,
+    squarefeet: 1476,
   },
   {
     address: "1234 test street",
     group_id: 2,
     status: "does not exist",
-    url: "whatever.com"
+    url: "whatever.com",
+    bed: 69,
+    bath: 420,
+    squarefeet: 69420,
   },
 ])
 
