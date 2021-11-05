@@ -8,7 +8,8 @@ class ListingsController < ApplicationController
       url: params[:url],
       beds: params[:beds],
       baths: params[:baths],
-      squarefeet: params[:squarefeet]
+      squarefeet: params[:squarefeet],
+      image: params[:image]
     )
     if listing.save 
       render json: listing 
@@ -19,9 +20,9 @@ class ListingsController < ApplicationController
 
   def update
     listing = Listing.find(params[:id])
-    listing.address = params[:address] || listing.address
     listing.status = params[:status] || listing.status
     listing.url = params[:url] || listing.url
+    listing.image = params[:image] || listing.image
     listing.beds = params[:beds] || listing.beds
     listing.baths = params[:baths] || listing.baths
     listing.squarefeet = params[:squarefeet] || listing.squarefeet

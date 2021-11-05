@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU5MTMxMTF9.5KpUr-J0UtwACT2Lzn9KJF3aEj0Q0PRAtkQHBNAR7V8
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzYxNDI0OTF9.a7soztOr7ZevoUlyVFH1vDLrJ_C1b2MelrutIjqV_Kk
 
 ### Users create (signup)
 POST http://localhost:3000/users/
@@ -41,6 +41,15 @@ Authorization: Bearer {{jwt}}
   "address": "1234 test street",
   "status": "does not exist",
   "url": "test.com"
+}
+
+### listing update 
+PATCH http://localhost:3000/listings/4 
+Content-Type: application/json 
+Authorization: Bearer {{jwt}}
+
+{
+  "bed": 5
 }
 
 ### Comment delete
