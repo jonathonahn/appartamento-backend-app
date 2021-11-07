@@ -69,6 +69,7 @@ Listing.create!([
     beds: 4,
     baths: 3,
     squarefeet: 1432,
+    rent: 4026,
   },
   {
     address: "4650 mascot  st",
@@ -79,6 +80,7 @@ Listing.create!([
     beds: 5,
     baths: 4,
     squarefeet: 1500,
+    rent: 4650,
   },
   {
     address: "4603 pickford st",
@@ -89,6 +91,7 @@ Listing.create!([
     beds: 4,
     baths: 4,
     squarefeet: 1645,
+    rent: 4600,
   },
   {
     address: "1233 s westgate ave",
@@ -99,6 +102,7 @@ Listing.create!([
     beds: 3,
     baths: 3,
     squarefeet: 1476,
+    rent: 4495,
   },
   {
     address: "1234 test street",
@@ -108,6 +112,7 @@ Listing.create!([
     beds: 69,
     baths: 420,
     squarefeet: 69420,
+    rent: 42069,
   },
 ])
 

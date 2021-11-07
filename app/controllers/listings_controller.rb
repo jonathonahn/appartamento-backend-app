@@ -9,7 +9,8 @@ class ListingsController < ApplicationController
       beds: params[:beds],
       baths: params[:baths],
       squarefeet: params[:squarefeet],
-      image: params[:image]
+      image: params[:image],
+      rent: params[:rent]
     )
     if listing.save 
       render json: listing 
@@ -26,6 +27,7 @@ class ListingsController < ApplicationController
     listing.beds = params[:beds] || listing.beds
     listing.baths = params[:baths] || listing.baths
     listing.squarefeet = params[:squarefeet] || listing.squarefeet
+    listing.rent = params[:rent] || listing.rent
     if listing.save 
       render json: listing 
     else 
