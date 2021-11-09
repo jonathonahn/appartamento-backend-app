@@ -5,18 +5,6 @@ class GroupsController < ApplicationController
     render json: group, include: ["listings.comments.user", :users]
   end
 
-  def create  # delete later maybe
-    group = Group.new(
-      name: params[:name],
-      image: params[:image],
-    )
-    if group.save 
-      render json: group 
-    else 
-    render json: { errors: group.errors.full_messages}, status: :bad_request
-    end
-  end
-
   def update
     group = current_user.group
     group.name = params[:name] || group.name

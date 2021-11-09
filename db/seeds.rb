@@ -23,7 +23,7 @@ User.create!([
     password: "password",
     password_confirmation: "password",
     group_id: 1,
-    image: "https://i.kym-cdn.com/photos/images/newsfeed/000/970/542/3cd.jpg",
+    image: "https://i.pinimg.com/originals/85/57/8a/85578ad88c95b86231fbd13d852047af.jpg",
 },
 {
   name: "james",
@@ -31,7 +31,7 @@ User.create!([
   password: "password",
   password_confirmation: "password",
   group_id: 1,
-  image: "https://i.kym-cdn.com/photos/images/newsfeed/000/970/542/3cd.jpg",
+  image: "https://i80sportsblog.com/wp-content/uploads/2013/08/james-harden-beard-gif.gif",
 },
 {
   name: "jon",
@@ -39,7 +39,7 @@ User.create!([
   password: "password",
   password_confirmation: "password",
   group_id: 1,
-  image: "https://i.kym-cdn.com/photos/images/newsfeed/000/970/542/3cd.jpg",
+  image: "https://melmagazine.com/wp-content/uploads/2021/01/66f-1.jpg",
 },
 {
   name: "nathan",
@@ -47,7 +47,7 @@ User.create!([
   password: "password",
   password_confirmation: "password",
   group_id: 1,
-  image: "https://i.kym-cdn.com/photos/images/newsfeed/000/970/542/3cd.jpg",
+  image: "https://m.media-amazon.com/images/M/MV5BNjYzODk1NTE5NF5BMl5BanBnXkFtZTgwNzUzMTY2MjE@._V1_UY1200_CR485,0,630,1200_AL_.jpg",
 },
 {
   name: "dani",
@@ -57,13 +57,21 @@ User.create!([
   group_id: 2,
   image: "https://i.kym-cdn.com/photos/images/newsfeed/000/970/542/3cd.jpg",
 },
+{
+  name: "dwayne",
+  email: "dwayne@therock.com",
+  password: "password",
+  password_confirmation: "password",
+  group_id: 1,
+  image: "https://i.kym-cdn.com/photos/images/newsfeed/000/970/542/3cd.jpg",
+},
 ])
 
 Listing.create!([
   {
     address: "8961 cadillac ave",
     group_id: 1,
-    status: "pending contact",
+    status: "Application Submitted",
     url: "https://www.apartments.com/8961-cadillac-ave-los-angeles-ca/5r85qzq/",
     image: "https://images1.apartments.com/i2/r-2i-_80D6viKkNuzcxAu_cytXWt7HrLNOLTx-cSeTE/116/8961-cadillac-ave-los-angeles-ca-primary-photo.jpg?p=1",
     beds: 4,
@@ -74,7 +82,7 @@ Listing.create!([
   {
     address: "4650 mascot  st",
     group_id: 1,
-    status: "denied",
+    status: "Denied",
     url: "https://www.zillow.com/homedetails/4650-Mascot-St-Los-Angeles-CA-90019/2115431785_zpid/",
     image: "https://photos.zillowstatic.com/fp/6bbea42bb41b7d27de40057ca969dcf2-uncropped_scaled_within_1536_1152.webp",
     beds: 5,
@@ -85,7 +93,7 @@ Listing.create!([
   {
     address: "4603 pickford st",
     group_id: 1,
-    status: "confirmed",
+    status: "Confirmed",
     url: "https://www.zillow.com/homedetails/4601-Pickford-St-Los-Angeles-CA-90019/20602010_zpid/",
     image: "https://photos.zillowstatic.com/fp/d6aaa12b78cb6cd02460e9976b5080ca-uncropped_scaled_within_1536_1152.webp",
     beds: 4,
@@ -96,7 +104,7 @@ Listing.create!([
   {
     address: "1233 s westgate ave",
     group_id: 1,
-    status: "pending walkthrough",
+    status: "Pending Walkthrough",
     url: "https://www.apartments.com/1233-s-westgate-ave-los-angeles-ca/y14z29r/",
     image: "https://images1.apartments.com/i2/Q9tz0Bb7coDqI38JXn-tciJXDWqCG5rPoYbjwCYiTNs/116/1233-s-westgate-ave-los-angeles-ca-building-photo.jpg?p=1",
     beds: 3,
